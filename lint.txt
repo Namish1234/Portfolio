@@ -1,0 +1,163 @@
+
+> temporary_app@0.1.0 lint
+> eslint
+
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\app\page.tsx
+  139:13  error  Do not use an `<a>` element to navigate to `/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\animated-hero.tsx
+  23:179  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  23:190  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\background-paths.tsx
+  38:44  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\background-paths.tsx:38:44
+  36 |                         }}
+  37 |                         transition={{
+> 38 |                             duration: 20 + Math.random() * 10,
+     |                                            ^^^^^^^^^^^^^ Cannot call impure function
+  39 |                             repeat: Number.POSITIVE_INFINITY,
+  40 |                             ease: "linear",
+  41 |                         }}  react-hooks/purity
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\card.tsx
+  218:22  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\card.tsx:218:22
+  216 |                     {...props}
+  217 |                 >
+> 218 |                     <DotsPattern />
+      |                      ^^^^^^^^^^^ This component is created during render
+  219 |                 </div>
+  220 |             )
+  221 |         }
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\card.tsx:75:29
+   73 | const Card = React.forwardRef<HTMLDivElement, CardProps>(
+   74 |     ({ className, variant, title, description, children, ...props }, ref) => {
+>  75 |         const DotsPattern = () => {
+      |                             ^^^^^^^
+>  76 |             const sharedClasses =
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  77 |                 "rounded-full outline outline-8 dark:outline-gray-950 sm:my-6 md:my-8 size-1 my-4 outline-gray-50 bg-green-400"
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 112 |             )
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 113 |         }
+      | ^^^^^^^^^^ The component is created during render here
+  114 |
+  115 |         const GradientLines = () => (
+  116 |             <>                                                                                                                                                                                     react-hooks/static-components
+  244:22  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\card.tsx:244:22
+  242 |                     {...props}
+  243 |                 >
+> 244 |                     <GradientLines />
+      |                      ^^^^^^^^^^^^^ This component is created during render
+  245 |                 </div>
+  246 |             )
+  247 |         }
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\card.tsx:115:31
+  113 |         }
+  114 |
+> 115 |         const GradientLines = () => (
+      |                               ^^^^^^^
+> 116 |             <>
+      | ^^^^^^^^^^^^^^
+> 117 |                 <div className="absolute left-0 top-4 -z-0 h-px w-full bg-gradient-to-l from-zinc-200 via-zinc-400 to-zinc-600 dark:from-zinc-900 dark:via-zinc-700 dark:to-zinc-500 sm:top-6 md:top-8" />
+      …
+      | ^^^^^^^^^^^^^^
+> 124 |             </>
+      | ^^^^^^^^^^^^^^
+> 125 |         )
+      | ^^^^^^^^^^ The component is created during render here
+  126 |
+  127 |         const PlusIcons = () => (
+  128 |             <>                                                                                                                                                                                                                                                                                                              react-hooks/static-components
+  255:18  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\card.tsx:255:18
+  253 |                 {...props}
+  254 |             >
+> 255 |                 <InnerContent />
+      |                  ^^^^^^^^^^^^ This component is created during render
+  256 |                 {content}
+  257 |             </div>
+  258 |         )
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\card.tsx:189:30
+  187 |         )
+  188 |
+> 189 |         const InnerContent = () => {
+      |                              ^^^^^^^
+> 190 |             if (variant === "dots") return <DotsPattern />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 191 |             if (variant === "gradient") return <GradientLines />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 192 |             if (variant === "plus") return <PlusIcons />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 193 |             if (variant === "corners") return <CornerBorders />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 194 |             return null
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 195 |         }
+      | ^^^^^^^^^^ The component is created during render here
+  196 |
+  197 |         const content = (
+  198 |             <CardContent>  react-hooks/static-components
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\connoisseur-stack-interactor.tsx
+  95:29  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\container-scroll-animation.tsx
+  57:55  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  73:5   warning  'translate' is defined but never used     @typescript-eslint/no-unused-vars
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\hero-dithering-card.tsx
+  45:32  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  51:46  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\minimalist-navbar.tsx
+  22:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\minimalist-navbar.tsx:22:9
+  20 |
+  21 |     useEffect(() => {
+> 22 |         setMounted(true);
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  23 |     }, []);
+  24 |
+  25 |     return (  react-hooks/set-state-in-effect
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\text-block-animation.tsx
+   8:5   warning  'delay' is assigned a value but never used    @typescript-eslint/no-unused-vars
+  10:5   warning  'stagger' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  38:38  error    Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\tubelight-navbar.tsx
+  29:12  warning  'isMobile' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\LOQ\OneDrive\Desktop\Portfolio\src\components\ui\zoom-parallax.tsx
+  42:33  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+✖ 18 problems (12 errors, 6 warnings)
+

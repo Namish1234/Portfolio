@@ -1,0 +1,14 @@
+﻿src/components/ui/logo-cloud-3.tsx(26,46): error TS2322: Type '{ children: Element[]; gap: number; reverse: true; speed: number; speedOnHover: number; }' is not assignable to type 'IntrinsicAttributes & InfiniteSliderProps'.
+  Property 'speed' does not exist on type 'IntrinsicAttributes & InfiniteSliderProps'.
+src/components/ui/sterling-gate-kinetic-navigation.tsx(59,127): error TS17001: JSX elements cannot have multiple attributes with the same name.
+src/components/ui/text-block-animation.tsx(46,17): error TS2322: Type '{ hidden: { scaleX: number; transformOrigin: string; }; visible: { scaleX: number[]; transformOrigin: string[]; transition: { times: number[]; duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ scaleX: number[]; transformOrigin: string[]; transition: { times: number[]; duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ scaleX: number[]; transformOrigin: string[]; transition: { times: number[]; duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ scaleX: number[]; transformOrigin: string[]; transition: { times: number[]; duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ times: number[]; duration: number; ease: string; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ times: number[]; duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ times: number[]; duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[] | undefined'.
