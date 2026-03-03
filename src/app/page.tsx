@@ -148,7 +148,7 @@ export default function Home() {
                 </div>
                 <span className="text-[10px] md:text-xs font-semibold">GitHub</span>
               </a>
-              <a href="https://www.linkedin.com/in/namish-shukla-a919a03a2/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex flex-col items-center gap-2 group">
+              <a href="https://www.linkedin.com/in/zaratsu/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex flex-col items-center gap-2 group">
                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-border flex items-center justify-center group-hover:bg-primary/10">
                   <Linkedin strokeWidth={1.5} size={20} className="md:w-6 md:h-6" />
                 </div>
