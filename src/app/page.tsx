@@ -12,6 +12,12 @@ import { FooterPattern } from "@/components/ui/footer-pattern";
 export default function Home() {
   const timelineData = [
     {
+      title: "IMC Prosperity (Round 5)",
+      description: "Successfully competed and completed Round 5 of the IMC Prosperity global trading competition.",
+      date: "May 2026",
+      url: "https://prosperity.imc.com"
+    },
+    {
       title: "Great Indian BUDGET",
       description: "Launched a comprehensive AI/ML platform. Constantly pushing boundaries and building the future of Web Applications.",
       date: "January 2025 - Present",

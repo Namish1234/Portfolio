@@ -17,13 +17,13 @@ function Hero() {
                         <div className="h-[2em] relative flex justify-center items-start w-full">
                             <WordRotate
                                 className="text-primary"
-                                words={["CP Addict", "Vibe Developer", "Gym Freak", "Vero's Founder"]}
+                                words={["CP Addict", "Vibe Developer", "Gym Freak", "Nevada's Founder"]}
                             />
                         </div>
                     </h1>
 
                     <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed mt-4">
-                        I am building VERO, a platform that helps you trust what you see. Other than that, I just love finding adventure. My Moto? <span className="text-primary">"Just Do It"</span>
+                        I am building Nevada, a platform that helps you backtest better. Other than that, I just love finding adventure. My Moto? <span className="text-primary">"Just Do It"</span>
                     </p>
                 </div>
 

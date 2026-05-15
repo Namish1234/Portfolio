@@ -7,6 +7,12 @@ export const metadata = {
 
 const DEDICATED_TIMELINE_DATA = [
     {
+        year: "2026",
+        events: [
+            { title: "IMC Prosperity (Round 5)", description: "Successfully completed Round 5 of the IMC Prosperity global trading competition.", url: "https://prosperity.imc.com" }
+        ]
+    },
+    {
         year: "2025",
         events: [
             { title: "Great Indian BUDGET", description: "Launched a comprehensive AI/ML platform for budget analysis.", url: "https://budget.greatindian.com" },

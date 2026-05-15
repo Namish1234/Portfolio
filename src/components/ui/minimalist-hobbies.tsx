@@ -17,19 +17,19 @@ const hobbiesData = [
     {
         title: "YouTube",
         description: "I actively document my programming journey and share tech insights. Content creation is my way of giving back while cementing my own understanding.",
-        link: "https://youtube.com",
+        link: "https://www.youtube.com/@aniway5658",
         linkText: "Watch videos"
     },
     {
         title: "Learning",
         description: "I am constantly expanding my horizons beyond my immediate tech stack. Whether exploring new algorithms, frameworks, or architectural optimizations.",
-        link: "https://github.com",
+        link: "https://github.com/Namish1234?tab=repositories",
         linkText: "Explore repositories"
     },
     {
         title: "Competitive\nCode",
         description: "I spend downtime optimizing code to execute in absolute milliseconds. Exploring intricate data structures and competing in algorithmic challenges is my kind of puzzle.",
-        link: "https://leetcode.com",
+        link: "https://codeforces.com/profile/Zaratsu",
         linkText: "See rankings"
     }
 ];
